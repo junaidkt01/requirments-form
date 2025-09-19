@@ -772,7 +772,7 @@ const AdvancedFormBuilder: React.FC = () => {
 
                                 {/* Form Fields */}
                                 <div className="space-y-6">
-                                    {formData.fields.map((field, index) => (
+                                    {formData.fields.map((field) => (
                                         <div
                                             key={field.id}
                                             draggable
