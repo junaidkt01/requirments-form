@@ -12,6 +12,11 @@
   justify-content: space-between;
   align-items: center;
 
+  .header_logo {
+    width: 100px;
+    cursor: pointer;
+  }
+
   .head_icons {
     display: flex;
     align-items: center;

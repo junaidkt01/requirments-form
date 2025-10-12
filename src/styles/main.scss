@@ -2,12 +2,25 @@
 * {
   box-sizing: border-box;
 }
+
 body {
   font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto,
     "Helvetica Neue", Arial;
   background: #f7f8fb;
   padding: 24px;
   color: #222;
+
+  // background-image: url("/bg.jpg");
+
+  // background-image:
+  //   linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .8)),
+  //   url("/bg.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  // backdrop-filter: blur(20px);
 }
 
 .auth-card {
@@ -25,11 +38,13 @@ body {
   gap: 8px;
   margin-bottom: 14px;
 }
+
 .label {
   font-size: 14px;
   font-weight: 600;
   color: #242424;
 }
+
 .input {
   border-radius: 12px;
   border: 1px solid #e6e9ef;
@@ -48,18 +63,22 @@ body {
   border-color: #f44336;
   box-shadow: none;
 }
+
 .helper {
   font-size: 13px;
   color: #9aa0a6;
 }
+
 .error {
   color: #f44336;
   font-size: 13px;
   margin-top: 6px;
 }
+
 .actions {
   margin-top: 16px;
 }
+
 .btn {
   display: inline-block;
   width: 100%;
@@ -71,11 +90,13 @@ body {
   border: none;
   cursor: pointer;
 }
+
 .btn.secondary {
   background: transparent;
   color: #6886f8;
   border: 1px solid #e6e9ef;
 }
+
 .small-link {
   display: inline-block;
   margin-top: 8px;
@@ -83,10 +104,12 @@ body {
   color: #5b6be6;
   text-decoration: none;
 }
+
 .otp-row {
   display: flex;
   gap: 8px;
 }
+
 .otp-input {
   width: 56px;
   text-align: center;

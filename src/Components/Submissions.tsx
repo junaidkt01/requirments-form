@@ -6,11 +6,27 @@ import { useUser } from "../context/UserContext";
 
 interface Submission {
     id: string;
-    code: string;
-    createdAt: any;
-    message_number: string;
     budget: string;
+    code: string;
+    color: string[];
+    createdAt: any;
+    name_of_client: string;
+    district: any;
+    lead_person: any;
     location: string;
+    message_number: string;
+    phone_1: string;
+    phone_2: string;
+    plot_size: string;
+    project_size: string[];
+    remarks: string;
+    requirment_id: string;
+    rooms: string[];
+    scope: string[];
+    special_notes: string[];
+    starting_time: string[];
+    user_id: string[];
+    isSendMessage: string[];
     [key: string]: any;
 }
 
@@ -18,6 +34,8 @@ const Submissions = () => {
     const user = useUser();
     const [submissions, setSubmissions] = useState<Submission[]>([]);
     const [loading, setLoading] = useState(true);
+
+    console.log("submissions: ", submissions);
 
     const fetchSubmissions = async () => {
         if (!user) return;
@@ -66,25 +84,53 @@ const Submissions = () => {
                 <table className="min-w-full border border-gray-300 rounded">
                     <thead className="bg-gray-100">
                         <tr>
-                            <th className="px-4 py-2 border">Code</th>
-                            <th className="px-4 py-2 border">Created At</th>
-                            <th className="px-4 py-2 border">WhatsApp Number</th>
-                            <th className="px-4 py-2 border">Location</th>
-                            <th className="px-4 py-2 border">Budget</th>
+                            <th className="px-4 py-2 border text-nowrap">SL No</th>
+                            <th className="px-4 py-2 border text-nowrap">Code</th>
+                            <th className="px-4 py-2 border text-nowrap">Lead person</th>
+                            <th className="px-4 py-2 border text-nowrap">Date</th>
+                            <th className="px-4 py-2 border text-nowrap">Time</th>
+                            <th className="px-4 py-2 border text-nowrap">Name of client</th>
+                            <th className="px-4 py-2 border text-nowrap">Scope</th>
+                            <th className="px-4 py-2 border text-nowrap">Starting time</th>
+                            <th className="px-4 py-2 border text-nowrap">Phone No.</th>
+                            <th className="px-4 py-2 border text-nowrap">District</th>
+                            <th className="px-4 py-2 border text-nowrap">Location</th>
+                            <th className="px-4 py-2 border text-nowrap">Plot</th>
+                            <th className="px-4 py-2 border text-nowrap">Project size</th>
+                            <th className="px-4 py-2 border text-nowrap">Remarks</th>
+                            <th className="px-4 py-2 border text-nowrap">Rooms</th>
+                            <th className="px-4 py-2 border text-nowrap">Budget</th>
+                            <th className="px-4 py-2 border text-nowrap">Special notes</th>
+                            <th className="px-4 py-2 border text-nowrap">Colour</th>
+                            <th className="px-4 py-2 border text-nowrap">Send Message</th>
                         </tr>
                     </thead>
                     <tbody>
-                        {submissions.map((sub) => (
+                        {submissions.map((sub, i) => (
                             <tr key={sub.id} className="hover:bg-gray-50">
-                                <td className="px-4 py-2 border">{sub.code}</td>
-                                <td className="px-4 py-2 border">
-                                    {sub.createdAt?.toDate
-                                        ? sub.createdAt.toDate().toLocaleString()
-                                        : sub.createdAt}
-                                </td>
-                                <td className="px-4 py-2 border">{sub.message_number}</td>
-                                <td className="px-4 py-2 border">{sub.location}</td>
-                                <td className="px-4 py-2 border">{sub.budget}</td>
+                                <td className="px-4 py-2 border text-nowrap">{i + 1}</td>
+                                <td className="px-4 py-2 border text-nowrap">{sub.code}</td>
+                                <td className="px-4 py-2 border text-nowrap">{sub.lead_person}</td>
+                                <td className="px-4 py-2 border text-nowrap">{
+                                    sub.createdAt.toDate().toLocaleString().split(",")[0]
+                                }</td>
+                                <td className="px-4 py-2 border text-nowrap">{
+                                    sub.createdAt.toDate().toLocaleString().split(",")[1]
+                                }</td>
+                                <td className="px-4 py-2 border text-nowrap">{sub.name_of_client}</td>
+                                <td className="px-4 py-2 border text-nowrap">{sub.scope}</td>
+                                <td className="px-4 py-2 border text-nowrap">{sub.starting_time}</td>
+                                <td className="px-4 py-2 border text-nowrap">{sub.phone_1} / {sub.phone_2}</td>
+                                <td className="px-4 py-2 border text-nowrap">{sub.district}</td>
+                                <td className="px-4 py-2 border text-nowrap">{sub.location}</td>
+                                <td className="px-4 py-2 border text-nowrap">{sub.plot_size}</td>
+                                <td className="px-4 py-2 border text-nowrap">{sub.project_size.map((item, i) => <span key={i} >{item}, </span>)}</td>
+                                <td className="px-4 py-2 border text-nowrap">{sub.remarks}</td>
+                                <td className="px-4 py-2 border text-nowrap">{sub.rooms}</td>
+                                <td className="px-4 py-2 border text-nowrap">{sub.budget}</td>
+                                <td className="px-4 py-2 border text-nowrap">{sub.special_notes}</td>
+                                <td className="px-4 py-2 border text-nowrap">{sub.color}</td>
+                                <td className="px-4 py-2 border text-nowrap">{sub.isSendMessage}</td>
                             </tr>
                         ))}
                     </tbody>

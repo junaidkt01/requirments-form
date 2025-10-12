@@ -33,20 +33,25 @@ styles.scss
   cursor: pointer;
   transition: 0.2s;
 }
+
 .btn:hover {
   background: #d1d5db;
 }
+
 .btn.primary {
   background: #3b82f6;
   color: white;
 }
+
 .btn.primary:hover {
   background: #2563eb;
 }
+
 .btn.danger {
   background: #ef4444;
   color: white;
 }
+
 .btn.small {
   padding: 4px 8px;
   font-size: 12px;
