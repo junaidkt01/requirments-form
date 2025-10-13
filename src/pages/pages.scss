@@ -1,10 +1,15 @@
 .requirments_form {
+  // background-color: red;
+
   .field {
     label {
       font-size: 16px;
     }
+
     .input_field {
       border: 2px solid #0000001a;
+      background-color: #f8f9fa;
+
       outline: none;
       height: 56px;
       border-radius: 12px;
@@ -26,15 +31,18 @@
       min-height: 56px;
       border-radius: 12px;
     }
+
     .mySelect__menu {
       background-color: white;
       box-shadow: 0 4px 8px #0000001a;
     }
+
     .mySelect__multi-value {
       background-color: #e6f0ff;
     }
 
     position: relative;
+
     .use_whatsapp {
       position: absolute;
       right: 10px;

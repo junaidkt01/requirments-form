@@ -120,18 +120,6 @@ const RequirmentsForm = () => {
                 />
             </div>
 
-            {/* Special Notes */}
-            <div className="field">
-                <label>Special Notes</label>
-                <CreatableSelect
-                    classNamePrefix="mySelect"
-
-                    isMulti
-                    options={specialNotes}
-                    onChange={(val) => handleSelectChange("special_notes", val)}
-                />
-            </div>
-
             {/* Scope */}
             <div className="field">
                 <label>Scope</label>
@@ -229,9 +217,9 @@ const RequirmentsForm = () => {
 
             {/* Plot Size */}
             <div className="field">
-                <label>Plot Size</label>
+                <label>Plot Ownership</label>
                 <div className="plot_size_radios">
-                    {["Plot to purchase", "Already purchased"].map((val) => (
+                    {["Own a plot", "Looking for a plot"].map((val) => (
                         <div key={val}>
                             <input
                                 type="radio"
@@ -249,7 +237,7 @@ const RequirmentsForm = () => {
 
             {/* Project Size */}
             <div className="field">
-                <label>Project Size</label>
+                <label>Plot Size</label>
                 <CreatableSelect
                     classNamePrefix="mySelect"
 
@@ -259,15 +247,15 @@ const RequirmentsForm = () => {
                 />
             </div>
 
-            {/* Remarks */}
+            {/* Project Size */}
             <div className="field">
-                <label>Remarks</label>
+                <label>Project Size</label>
                 <CreatableSelect
                     classNamePrefix="mySelect"
 
                     isMulti
-                    options={rooms}
-                    onChange={(val) => handleSelectChange("rooms", val)}
+                    options={projectSize}
+                    onChange={(val) => handleSelectChange("project_size", val)}
                 />
             </div>
 
@@ -294,8 +282,33 @@ const RequirmentsForm = () => {
                 />
             </div>
 
-            {/* Color */}
+
+            {/* Remarks */}
             <div className="field">
+                <label>Remarks</label>
+                <CreatableSelect
+                    classNamePrefix="mySelect"
+
+                    isMulti
+                    options={rooms}
+                    onChange={(val) => handleSelectChange("rooms", val)}
+                />
+            </div>
+
+            {/* Special Notes */}
+            <div className="field">
+                <label>Special Notes</label>
+                <CreatableSelect
+                    classNamePrefix="mySelect"
+
+                    isMulti
+                    options={specialNotes}
+                    onChange={(val) => handleSelectChange("special_notes", val)}
+                />
+            </div>
+
+            {/* Color */}
+            {/* <div className="field">
                 <label>Color</label>
                 <CreatableSelect
                     classNamePrefix="mySelect"
@@ -304,7 +317,7 @@ const RequirmentsForm = () => {
                     options={colourOptions}
                     onChange={(val) => handleSelectChange("color", val)}
                 />
-            </div>
+            </div> */}
 
             <button onClick={handleSubmit} className="btn">
                 Submit

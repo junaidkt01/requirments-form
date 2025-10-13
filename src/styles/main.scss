@@ -10,15 +10,18 @@ body {
   padding: 24px;
   color: #222;
 
+  background-image: url("/public/Background.png");
+  background-size: contain;
+
   // background-image: url("/bg.jpg");
 
   // background-image:
   //   linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .8)),
   //   url("/bg.jpg");
 
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  // background-size: cover;
+  // background-position: center;
+  // background-repeat: no-repeat;
 
   // backdrop-filter: blur(20px);
 }
