@@ -4,7 +4,7 @@ import CreatableSelect from "react-select/creatable";
 // import PhoneInput from "react-phone-input-2";
 // import "react-phone-input-2/lib/style.css";
 import {
-    colourOptions,
+    // colourOptions,
     districts,
     projectSize,
     rooms,
