@@ -45,20 +45,20 @@ export const startingTime: readonly DataTypes[] = [
 ];
 
 export const districts: readonly DataTypes[] = [
-  { value: "Kasarkode", label: "Kasarkode" },
+  { value: "Kasaragod", label: "Kasaragod" },
   { value: "Kannur", label: "Kannur" },
   { value: "Wayanad", label: "Wayanad" },
   { value: "Kozhikode", label: "Kozhikode" },
   { value: "Malappuram", label: "Malappuram" },
   { value: "Palakkad", label: "Palakkad" },
-  { value: "Thrissure", label: "Thrissure" },
+  { value: "Thrissure", label: "Thrissur" },
   { value: "Eranakulam", label: "Eranakulam" },
   { value: "Kottayam", label: "Kottayam" },
-  { value: "Alppuzha", label: "Alppuzha" },
+  { value: "Alppuzha", label: "Alappuzha" },
   { value: "Idukki", label: "Idukki" },
   { value: "Pathanamthitta", label: "Pathanamthitta" },
   { value: "Kollam", label: "Kollam" },
-  { value: "Thiruvanthaparuram", label: "Thiruvanthaparuram" },
+  { value: "Thiruvananthapuram", label: "Thiruvananthapuram" },
 ];
 
 export const rooms: readonly DataTypes[] = [
