@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import { useRef, useState } from "react";
 
 /**
  * Improved Voice Recorder + Transcriber
@@ -32,7 +32,8 @@ const VoiceRecorder = () => {
         recog.interimResults = true;
         recog.maxAlternatives = 3;
 
-        recog.onresult = (event: SpeechRecognitionEvent) => {
+        // recog.onresult = (event: SpeechRecognitionEvent) => {
+        recog.onresult = (event: any) => {
             let interim = "";
             for (let i = event.resultIndex; i < event.results.length; ++i) {
                 const res = event.results[i];
