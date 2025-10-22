@@ -70,6 +70,16 @@ export const rooms: readonly DataTypes[] = [
   { value: "Above 5BHK", label: "Above 5BHK" },
 ];
 
+export const plotSize: readonly DataTypes[] = [
+  { value: "500 sqft", label: "500 sqft" },
+  { value: "1000 sqft", label: "1000 sqft" },
+  { value: "1500 sqft", label: "1500 sqft" },
+  { value: "2000 sqft", label: "2000 sqft" },
+  { value: "2500 sqft", label: "2500 sqft" },
+  { value: "3000 sqft", label: "3000 sqft" },
+  { value: "Above 4000 sqft", label: "Above 4000 sqft" },
+];
+
 export const projectSize: readonly DataTypes[] = [
   { value: "5 Cent", label: "5 Cent" },
   { value: "10 Cent", label: "10 Cent" },

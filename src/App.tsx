@@ -15,7 +15,6 @@ export default function App() {
   return (
     <BrowserRouter>
       <UserProvider>
-
         <Header />
         <div className="mt-[70px]" >
           <Routes>
