@@ -87,16 +87,20 @@ body {
   width: 100%;
   padding: 12px;
   border-radius: 10px;
-  background: #6886f8;
+  background: #0c555e;
   color: white;
   font-weight: 600;
   border: none;
   cursor: pointer;
 }
 
+.btn.disabled {
+  background: #0c555e94;
+}
+
 .btn.secondary {
   background: transparent;
-  color: #6886f8;
+  color: #094349;
   border: 1px solid #e6e9ef;
 }
 
@@ -104,7 +108,7 @@ body {
   display: inline-block;
   margin-top: 8px;
   font-size: 14px;
-  color: #5b6be6;
+  color: #094349;
   text-decoration: none;
 }
 

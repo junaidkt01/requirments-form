@@ -37,6 +37,7 @@ export default function Register() {
                 email,
                 phone: phone || undefined,
                 status: "activated",
+                role: "sales",
             });
 
             // Send email verification

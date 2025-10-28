@@ -10,6 +10,7 @@ interface UserProfile {
   email: string;
   phone?: string;
   status: string;
+  role?: "admin" | "sales" | "marketing";
 }
 
 const UserContext = createContext<UserProfile | null>(null);
