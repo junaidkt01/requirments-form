@@ -10,7 +10,7 @@ interface VoiceRecorderProps {
 }
 
 const VoiceRecorder: React.FC<VoiceRecorderProps> = ({ onUploadComplete }) => {
-    const user = useUser();
+    const { user } = useUser();
     const [isRecording, setIsRecording] = useState(false);
     const [audioURL, setAudioURL] = useState<string | null>(null);
     const [uploading, setUploading] = useState(false);
@@ -90,27 +90,6 @@ const VoiceRecorder: React.FC<VoiceRecorderProps> = ({ onUploadComplete }) => {
             >
                 {isRecording ? <Square size={22} /> : <Mic size={22} />}
             </button>
-
-            {/* {status && (
-                <p className="text-sm text-gray-700 text-center px-3">
-                    {uploading ? "" : ""}{status}
-                </p>
-            )} */}
-
-            {/* {audioURL && (
-                <div className="flex flex-col items-center gap-2">
-                    {downloadURL && (
-                        <a
-                            href={downloadURL}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center gap-1 text-[#0c555e] underline hover:text-[#11717b] text-sm"
-                        >
-                            <Upload size={14} /> View Recording
-                        </a>
-                    )}
-                </div>
-            )} */}
         </div>
     );
 };

@@ -21,7 +21,7 @@ import VoiceRecorder from "../Components/VoiceRecorder";
 // import VoiceRecorder from "../Components/VoiceRecorder";
 
 const RequirmentsForm = () => {
-    const user = useUser();
+    const { user } = useUser();
 
     const [formData, setFormData] = useState({
         client_name: "",

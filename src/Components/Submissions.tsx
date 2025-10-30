@@ -31,7 +31,7 @@ interface Submission {
 }
 
 const Submissions = () => {
-    const user = useUser();
+    const { user } = useUser();
     const [submissions, setSubmissions] = useState<Submission[]>([]);
     const [loading, setLoading] = useState(true);
     const [searchTerm, setSearchTerm] = useState("");

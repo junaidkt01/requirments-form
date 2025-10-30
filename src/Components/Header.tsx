@@ -1,17 +1,21 @@
 import "./components.scss"
-import { signOut, auth } from "../firebase";
+// import { signOut, auth } from "../firebase";
 import { useUser } from "../context/UserContext";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
 const Header = () => {
+
+    const { user, logout } = useUser();
+
     async function handleLogout() {
-        await signOut(auth);
+        // await signOut(auth);
+        logout()
         window.location.href = "/login";
         setIsMenu(false)
     }
 
-    const user = useUser();
+    // const user = useUser();
     const navigate = useNavigate();
     console.log("user: ", user)
 
